@@ -6,6 +6,7 @@ async function connect() {
   try {
     logger.info("database connected");
     return mongoose.connect(dbUri, {
+      // @ts-ignore
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
