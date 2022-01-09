@@ -13,13 +13,14 @@ export interface productInput {
 }
 
 export interface productDocument extends productInput, mongoose.Document {
-    user: userDocument['_id'],
-    title: String,
-    description: String,
-    price: number,
-    image: String,
-    createdAt: Date,
-    updatedAt: Date,
+    productId: String;
+    user: userDocument['_id'];
+    title: String;
+    description: String;
+    price: number;
+    image: String;
+    createdAt: Date;
+    updatedAt: Date;
 }
 
 const schema = mongoose.Schema;
